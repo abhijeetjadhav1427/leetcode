@@ -5,9 +5,8 @@ public:
         int ans = nums[0];
         while(l<=r){
             int m = (r+l)/2;
-            if(nums[m] >= nums[l]){
-                ans = min(ans, nums[l]);
-                l = m+1;
+            if(nums[m] > nums[r]){
+                l=m+1;
             }
             else{
                 ans = min(ans, nums[m]);
